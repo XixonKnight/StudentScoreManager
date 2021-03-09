@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace BTL.model
 {
-    class Faculty
+    class WorkingProcess
     {
         public int id { get; set; }
-        public string facultyCode { get; set; }
-        public string facultyName { get; set; }
+        public int idEmp { get; set; }
         public string address { get; set; }
-        public string phone { get; set; }
-        public int foundedYear { get; set; }
+        public DateTime effectiveDate { get; set; }
+        public DateTime expirateDate { get; set; }
         public DateTime createdDate { get; set; }
         public DateTime updateDate { get; set; }
     }

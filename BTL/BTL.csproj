@@ -46,14 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\Constants.cs" />
+    <Compile Include="configDB\ConnectionString.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\Student.cs" />
+    <Compile Include="model\Complain.cs" />
+    <Compile Include="model\Department.cs" />
+    <Compile Include="model\Employee.cs" />
+    <Compile Include="model\Position.cs" />
+    <Compile Include="model\Project.cs" />
+    <Compile Include="model\Salary.cs" />
     <Compile Include="model\User.cs" />
+    <Compile Include="model\WorkingProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -77,6 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
