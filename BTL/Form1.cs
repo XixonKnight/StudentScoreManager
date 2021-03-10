@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace BTL
 {
-    public partial class MainForm : Form
+    public partial class ManagerForm : Form
     {
-        public MainForm()
+        public ManagerForm()
         {
             InitializeComponent();
         }
 
-        
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

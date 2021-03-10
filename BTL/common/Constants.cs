@@ -8,5 +8,7 @@ namespace BTL.common
 {
     class Constants
     {
+        public const string NOTIFY = "Thông báo";
+        //public const string NOTIFY = "Thông báo";
     }
 }
