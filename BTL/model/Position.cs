@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BTL.model
 {
-    class Position
+    public class Position
     {
         public int id { get; set; }
         public string posName { get; set; }

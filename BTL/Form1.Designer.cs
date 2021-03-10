@@ -1,7 +1,7 @@
 ﻿
 namespace BTL
 {
-    partial class MainForm
+    partial class ManagerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -73,6 +73,7 @@ namespace BTL
             this.changePassword.Name = "changePassword";
             this.changePassword.Size = new System.Drawing.Size(180, 22);
             this.changePassword.Text = "Đổi mật khẩu";
+            this.changePassword.Click += new System.EventHandler(this.changePassword_Click);
             // 
             // Exit
             // 
@@ -147,15 +148,16 @@ namespace BTL
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // MainForm
+            // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Name = "ManagerForm";
+            this.Text = "FormManager";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
