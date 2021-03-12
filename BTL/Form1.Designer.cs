@@ -102,42 +102,49 @@ namespace BTL
             this.managerEmp.Name = "managerEmp";
             this.managerEmp.Size = new System.Drawing.Size(215, 22);
             this.managerEmp.Text = "Quản lý nhân viên";
+            this.managerEmp.Click += new System.EventHandler(this.managerEmp_Click);
             // 
             // managerComplain
             // 
             this.managerComplain.Name = "managerComplain";
             this.managerComplain.Size = new System.Drawing.Size(215, 22);
             this.managerComplain.Text = "Quản lý khiểu nại";
+            this.managerComplain.Click += new System.EventHandler(this.managerComplain_Click);
             // 
             // managerSalary
             // 
             this.managerSalary.Name = "managerSalary";
             this.managerSalary.Size = new System.Drawing.Size(215, 22);
             this.managerSalary.Text = "Quản lý lương";
+            this.managerSalary.Click += new System.EventHandler(this.managerSalary_Click);
             // 
             // managerProject
             // 
             this.managerProject.Name = "managerProject";
             this.managerProject.Size = new System.Drawing.Size(215, 22);
             this.managerProject.Text = "Quản lý dự án";
+            this.managerProject.Click += new System.EventHandler(this.managerProject_Click);
             // 
             // managerWorkingProcess
             // 
             this.managerWorkingProcess.Name = "managerWorkingProcess";
             this.managerWorkingProcess.Size = new System.Drawing.Size(215, 22);
             this.managerWorkingProcess.Text = "Quản lý quá trình công tác";
+            this.managerWorkingProcess.Click += new System.EventHandler(this.managerWorkingProcess_Click);
             // 
             // managerDepartment
             // 
             this.managerDepartment.Name = "managerDepartment";
             this.managerDepartment.Size = new System.Drawing.Size(215, 22);
             this.managerDepartment.Text = "Quản lý phòng ban";
+            this.managerDepartment.Click += new System.EventHandler(this.managerDepartment_Click);
             // 
             // managerPosition
             // 
             this.managerPosition.Name = "managerPosition";
             this.managerPosition.Size = new System.Drawing.Size(215, 22);
             this.managerPosition.Text = "Quản lý chức vụ";
+            this.managerPosition.Click += new System.EventHandler(this.managerPosition_Click);
             // 
             // managerReport
             // 

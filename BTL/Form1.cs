@@ -75,6 +75,43 @@ namespace BTL
             frm.AutoScroll = true;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
+            pnlContent.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void managerEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managerComplain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managerSalary_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managerProject_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managerWorkingProcess_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managerDepartment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void managerPosition_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
