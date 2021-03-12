@@ -44,6 +44,7 @@ namespace BTL
             this.managerPosition = new System.Windows.Forms.ToolStripMenuItem();
             this.managerReport = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pnlContent = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +81,7 @@ namespace BTL
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(180, 22);
             this.Exit.Text = "Đăng xuất";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // quảnLýToolStripMenuItem
             // 
@@ -148,11 +150,21 @@ namespace BTL
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 24);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(800, 426);
+            this.pnlContent.TabIndex = 1;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ManagerForm";
@@ -181,6 +193,7 @@ namespace BTL
         private System.Windows.Forms.ToolStripMenuItem managerPosition;
         private System.Windows.Forms.ToolStripMenuItem managerReport;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel pnlContent;
     }
 }
 

@@ -15,6 +15,8 @@ namespace BTL.common
         public const string Messeage_Error_Confirm_Pasword = "Mật khẩu không khớp";
 
         public const string Messeage_Error_Current_Pasword = "Sai mật khẩu";
+
+        public const string Messeage_Change_Password_Success = "Thay đổi mật khẩu thành công";
         //public const string NOTIFY = "Thông báo";
     }
 }

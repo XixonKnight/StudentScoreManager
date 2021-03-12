@@ -136,6 +136,7 @@ namespace BTL
             this.Controls.Add(this.label1);
             this.Name = "frmChangePassword";
             this.Text = "frmChangePassword";
+            this.Load += new System.EventHandler(this.frmChangePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

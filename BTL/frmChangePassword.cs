@@ -24,6 +24,7 @@ namespace BTL
         public frmChangePassword(User user)
         {
             this.user = user;
+            InitializeComponent();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -40,9 +41,12 @@ namespace BTL
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.CommandText = "proc_update_user";
                         cmd.Parameters.AddWithValue("@username", user.username);
-                        cmd.Parameters.AddWithValue("@password", user.password);
+                        cmd.Parameters.AddWithValue("@password", txtNewPassword.Text);
                         cmd.Parameters.AddWithValue("@updateDate", updateDate);
                         cmd.ExecuteNonQuery();
+                        ManagerForm frm = new ManagerForm(user);
+                        frm.getUserPublic();
+                        MessageBox.Show(Constants.Messeage_Change_Password_Success, Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Hide();
                         Close();
                     }
@@ -54,7 +58,7 @@ namespace BTL
         private bool checkPassword()
         {
             bool flag = true;
-            string sql = " select * from tblTaiKhoan where tenTaiKhoan = '" + user.username +
+            string sql = " select * from tblTaiKhoan where tenDangNhap = '" + user.username +
                 "' and matKhau = '" + user.password + "'";
             using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
             {
@@ -86,6 +90,11 @@ namespace BTL
                 return false;
             }
             return true;
+        }
+
+        private void frmChangePassword_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

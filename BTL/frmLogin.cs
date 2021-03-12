@@ -39,9 +39,11 @@ namespace BTL
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataReader reader = cmd.ExecuteReader();
+                        User user = readUser(reader);
+                    reader.Close();
+                    reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        User user = readUser(reader);
                         Hide();
                         ManagerForm managerForm = new ManagerForm(user);
                         managerForm.ShowDialog();
@@ -49,7 +51,7 @@ namespace BTL
                     }
                     else
                     {
-                        MessageBox.Show("Đăng nhập thành công", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Đăng nhập không thành công", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 conn.Close();
@@ -68,13 +70,17 @@ namespace BTL
             User user = new User();
             while (reader.Read())
             {
-                user.username = (string)reader["tenTaiKhoan"];
-                user.password = (string)reader["matKhau"];
-                user.createdDate = (DateTime)reader["createdDate"];
-                if (reader["updateDate"] != null)
+                user.username = (string)reader[1];
+                user.password = (string)reader[2];
+                user.createdDate = (DateTime)reader[3];
+                if (!reader.IsDBNull(4))
                 {
-                    user.updateDate = (DateTime)reader["updateDate"];
+                    user.updateDate = (DateTime)reader[4];
+
                 }
+                //if ((bool)reader[4])
+                //{
+                //}
             }
             return user;
         }

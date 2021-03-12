@@ -70,5 +70,10 @@ namespace BTL
             frmLogin.ShowDialog();
             this.Close();
         }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
