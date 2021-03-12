@@ -44,6 +44,7 @@ namespace BTL
             this.managerPosition = new System.Windows.Forms.ToolStripMenuItem();
             this.managerReport = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pnlContent = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,14 +72,16 @@ namespace BTL
             // changePassword
             // 
             this.changePassword.Name = "changePassword";
-            this.changePassword.Size = new System.Drawing.Size(145, 22);
+            this.changePassword.Size = new System.Drawing.Size(180, 22);
             this.changePassword.Text = "Đổi mật khẩu";
+            this.changePassword.Click += new System.EventHandler(this.changePassword_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(145, 22);
+            this.Exit.Size = new System.Drawing.Size(180, 22);
             this.Exit.Text = "Đăng xuất";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // quảnLýToolStripMenuItem
             // 
@@ -99,42 +102,49 @@ namespace BTL
             this.managerEmp.Name = "managerEmp";
             this.managerEmp.Size = new System.Drawing.Size(215, 22);
             this.managerEmp.Text = "Quản lý nhân viên";
+            this.managerEmp.Click += new System.EventHandler(this.managerEmp_Click);
             // 
             // managerComplain
             // 
             this.managerComplain.Name = "managerComplain";
             this.managerComplain.Size = new System.Drawing.Size(215, 22);
             this.managerComplain.Text = "Quản lý khiểu nại";
+            this.managerComplain.Click += new System.EventHandler(this.managerComplain_Click);
             // 
             // managerSalary
             // 
             this.managerSalary.Name = "managerSalary";
             this.managerSalary.Size = new System.Drawing.Size(215, 22);
             this.managerSalary.Text = "Quản lý lương";
+            this.managerSalary.Click += new System.EventHandler(this.managerSalary_Click);
             // 
             // managerProject
             // 
             this.managerProject.Name = "managerProject";
             this.managerProject.Size = new System.Drawing.Size(215, 22);
             this.managerProject.Text = "Quản lý dự án";
+            this.managerProject.Click += new System.EventHandler(this.managerProject_Click);
             // 
             // managerWorkingProcess
             // 
             this.managerWorkingProcess.Name = "managerWorkingProcess";
             this.managerWorkingProcess.Size = new System.Drawing.Size(215, 22);
             this.managerWorkingProcess.Text = "Quản lý quá trình công tác";
+            this.managerWorkingProcess.Click += new System.EventHandler(this.managerWorkingProcess_Click);
             // 
             // managerDepartment
             // 
             this.managerDepartment.Name = "managerDepartment";
             this.managerDepartment.Size = new System.Drawing.Size(215, 22);
             this.managerDepartment.Text = "Quản lý phòng ban";
+            this.managerDepartment.Click += new System.EventHandler(this.managerDepartment_Click);
             // 
             // managerPosition
             // 
             this.managerPosition.Name = "managerPosition";
             this.managerPosition.Size = new System.Drawing.Size(215, 22);
             this.managerPosition.Text = "Quản lý chức vụ";
+            this.managerPosition.Click += new System.EventHandler(this.managerPosition_Click);
             // 
             // managerReport
             // 
@@ -147,15 +157,25 @@ namespace BTL
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 24);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(800, 426);
+            this.pnlContent.TabIndex = 1;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ManagerForm";
-            this.Text = "Form1";
+            this.Text = "FormManager";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -180,6 +200,7 @@ namespace BTL
         private System.Windows.Forms.ToolStripMenuItem managerPosition;
         private System.Windows.Forms.ToolStripMenuItem managerReport;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel pnlContent;
     }
 }
 
