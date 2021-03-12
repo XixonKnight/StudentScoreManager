@@ -10,3 +10,4 @@ D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.pdb
 D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.frmLogin.resources
 D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.ManagerForm.resources
 D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.frmRegister.resources
+D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.frmChangePassword.resources

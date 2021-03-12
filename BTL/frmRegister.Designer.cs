@@ -35,6 +35,7 @@ namespace BTL
             this.txtCreateUsername = new System.Windows.Forms.TextBox();
             this.txtCreatePassword = new System.Windows.Forms.TextBox();
             this.btnCreateRegister = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,10 +79,11 @@ namespace BTL
             this.txtCreatePassword.Name = "txtCreatePassword";
             this.txtCreatePassword.Size = new System.Drawing.Size(184, 20);
             this.txtCreatePassword.TabIndex = 4;
+            this.txtCreatePassword.UseSystemPasswordChar = true;
             // 
             // btnCreateRegister
             // 
-            this.btnCreateRegister.Location = new System.Drawing.Point(150, 130);
+            this.btnCreateRegister.Location = new System.Drawing.Point(124, 128);
             this.btnCreateRegister.Name = "btnCreateRegister";
             this.btnCreateRegister.Size = new System.Drawing.Size(75, 23);
             this.btnCreateRegister.TabIndex = 5;
@@ -89,11 +91,22 @@ namespace BTL
             this.btnCreateRegister.UseVisualStyleBackColor = true;
             this.btnCreateRegister.Click += new System.EventHandler(this.btnCreateRegister_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(233, 128);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 187);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCreateRegister);
             this.Controls.Add(this.txtCreatePassword);
             this.Controls.Add(this.txtCreateUsername);
@@ -102,6 +115,7 @@ namespace BTL
             this.Controls.Add(this.label1);
             this.Name = "frmRegister";
             this.Text = "frmRegister";
+            this.Load += new System.EventHandler(this.frmRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +129,6 @@ namespace BTL
         private System.Windows.Forms.TextBox txtCreateUsername;
         private System.Windows.Forms.TextBox txtCreatePassword;
         private System.Windows.Forms.Button btnCreateRegister;
+        private System.Windows.Forms.Button btnExit;
     }
 }

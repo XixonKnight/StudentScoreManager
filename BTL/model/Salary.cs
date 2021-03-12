@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BTL.model
 {
-    class Salary
+   public class Salary
     {
         public int id { get; set; }
         public int idEmp { get; set; }

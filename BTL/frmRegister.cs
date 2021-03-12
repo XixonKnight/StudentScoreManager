@@ -31,27 +31,49 @@ namespace BTL
 
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "pro_inserUser";
-                    cmd.Parameters.AddWithValue("@username",username);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    cmd.Parameters.AddWithValue("@createdDate", createdDate);
-                    try
+                    if (username != "" && password != "")
                     {
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Tạo tài khoản thành công", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        frmLogin frmLogin = new frmLogin();
-                        frmLogin.ShowDialog();
-                        this.Close();
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "pro_inserUser";
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+                        cmd.Parameters.AddWithValue("@createdDate", createdDate);
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Tạo tài khoản thành công", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            showFrmLogin();
+                        }
+                        catch (Exception)
+                        {
+                            //MessageBox.Show(e.Message, Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    catch (Exception)
+                    else
                     {
-                        //MessageBox.Show(e.Message, Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Nhập đầy đủ thông tin tài khoản", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 conn.Close();
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            showFrmLogin();
+        }
+
+        private void showFrmLogin()
+        {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
+            this.Close();
+        }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

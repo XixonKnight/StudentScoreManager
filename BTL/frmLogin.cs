@@ -1,5 +1,6 @@
 ﻿using BTL.common;
 using BTL.configDB;
+using BTL.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace BTL
 {
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
             InitializeComponent();
@@ -37,16 +39,19 @@ namespace BTL
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataReader reader = cmd.ExecuteReader();
+                        User user = readUser(reader);
+                    reader.Close();
+                    reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        this.Hide();
-                        ManagerForm managerForm = new ManagerForm();
+                        Hide();
+                        ManagerForm managerForm = new ManagerForm(user);
                         managerForm.ShowDialog();
-                        this.Close();
+                        Close();
                     }
                     else
                     {
-                        MessageBox.Show("Đăng nhập thành công",Constants.NOTIFY,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("Đăng nhập không thành công", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 conn.Close();
@@ -59,6 +64,25 @@ namespace BTL
             frmRegister fRegister = new frmRegister();
             fRegister.ShowDialog();
             this.Close();
+        }
+        private User readUser(SqlDataReader reader)
+        {
+            User user = new User();
+            while (reader.Read())
+            {
+                user.username = (string)reader[1];
+                user.password = (string)reader[2];
+                user.createdDate = (DateTime)reader[3];
+                if (!reader.IsDBNull(4))
+                {
+                    user.updateDate = (DateTime)reader[4];
+
+                }
+                //if ((bool)reader[4])
+                //{
+                //}
+            }
+            return user;
         }
     }
 }
