@@ -7,3 +7,16 @@ C:\Users\Dell\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.csproj.Genera
 C:\Users\Dell\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.csproj.CoreCompileInputs.cache
 C:\Users\Dell\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.exe
 C:\Users\Dell\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.pdb
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\bin\Debug\BTL.exe.config
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\bin\Debug\BTL.exe
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\bin\Debug\BTL.pdb
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.Properties.Resources.resources
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.View1.frmNhanVien.resources
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.exe
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.pdb
+C:\Users\Dell\Desktop\StudentScoreManager\BTL\obj\Debug\BTL.View1.frmDuAn.resources
+C:\Users\Dell\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.View1.frmDuAn.resources
+C:\Users\Dell\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.View1.frmNhanVien.resources
