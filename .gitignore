@@ -1,1 +1,4 @@
-BTL/obj/Debug/
+
+.vs/
+obj/
+bin/

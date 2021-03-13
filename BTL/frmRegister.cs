@@ -41,7 +41,7 @@ namespace BTL
                         try
                         {
                             cmd.ExecuteNonQuery();
-                            MessageBox.Show("Tạo tài khoản thành công", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Tạo tài khoản thành công  ", Constants.NOTIFY, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             showFrmLogin();
                         }
                         catch (Exception)
