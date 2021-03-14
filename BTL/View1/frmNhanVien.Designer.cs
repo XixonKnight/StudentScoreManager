@@ -40,8 +40,6 @@ namespace BTL.View1
             this.dtngaytao = new System.Windows.Forms.DateTimePicker();
             this.dtngayky = new System.Windows.Forms.DateTimePicker();
             this.dtngaysinh = new System.Windows.Forms.DateTimePicker();
-            this.txtmachucvu = new System.Windows.Forms.TextBox();
-            this.txtmaphongban = new System.Windows.Forms.TextBox();
             this.txthsl = new System.Windows.Forms.TextBox();
             this.txttrinhdo = new System.Windows.Forms.TextBox();
             this.txtquequan = new System.Windows.Forms.TextBox();
@@ -70,6 +68,8 @@ namespace BTL.View1
             this.label1 = new System.Windows.Forms.Label();
             this.txtma = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
+            this.cbxDepartment = new System.Windows.Forms.ComboBox();
+            this.cbxPosition = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -195,22 +195,6 @@ namespace BTL.View1
             this.dtngaysinh.Size = new System.Drawing.Size(106, 20);
             this.dtngaysinh.TabIndex = 27;
             // 
-            // txtmachucvu
-            // 
-            this.txtmachucvu.Enabled = false;
-            this.txtmachucvu.Location = new System.Drawing.Point(361, 147);
-            this.txtmachucvu.Name = "txtmachucvu";
-            this.txtmachucvu.Size = new System.Drawing.Size(78, 20);
-            this.txtmachucvu.TabIndex = 26;
-            // 
-            // txtmaphongban
-            // 
-            this.txtmaphongban.Enabled = false;
-            this.txtmaphongban.Location = new System.Drawing.Point(134, 147);
-            this.txtmaphongban.Name = "txtmaphongban";
-            this.txtmaphongban.Size = new System.Drawing.Size(100, 20);
-            this.txtmaphongban.TabIndex = 25;
-            // 
             // txthsl
             // 
             this.txthsl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -262,7 +246,7 @@ namespace BTL.View1
             this.txtsdt.Enabled = false;
             this.txtsdt.Location = new System.Drawing.Point(134, 90);
             this.txtsdt.Name = "txtsdt";
-            this.txtsdt.Size = new System.Drawing.Size(100, 20);
+            this.txtsdt.Size = new System.Drawing.Size(121, 20);
             this.txtsdt.TabIndex = 19;
             // 
             // groupBox2
@@ -301,6 +285,8 @@ namespace BTL.View1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cbxPosition);
+            this.groupBox1.Controls.Add(this.cbxDepartment);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
@@ -312,8 +298,6 @@ namespace BTL.View1
             this.groupBox1.Controls.Add(this.dtngaytao);
             this.groupBox1.Controls.Add(this.dtngayky);
             this.groupBox1.Controls.Add(this.dtngaysinh);
-            this.groupBox1.Controls.Add(this.txtmachucvu);
-            this.groupBox1.Controls.Add(this.txtmaphongban);
             this.groupBox1.Controls.Add(this.txthsl);
             this.groupBox1.Controls.Add(this.txttrinhdo);
             this.groupBox1.Controls.Add(this.txtquequan);
@@ -503,7 +487,7 @@ namespace BTL.View1
             this.txtma.Enabled = false;
             this.txtma.Location = new System.Drawing.Point(134, 38);
             this.txtma.Name = "txtma";
-            this.txtma.Size = new System.Drawing.Size(100, 20);
+            this.txtma.Size = new System.Drawing.Size(121, 20);
             this.txtma.TabIndex = 1;
             // 
             // btnThem
@@ -518,6 +502,22 @@ namespace BTL.View1
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // cbxDepartment
+            // 
+            this.cbxDepartment.FormattingEnabled = true;
+            this.cbxDepartment.Location = new System.Drawing.Point(134, 154);
+            this.cbxDepartment.Name = "cbxDepartment";
+            this.cbxDepartment.Size = new System.Drawing.Size(121, 21);
+            this.cbxDepartment.TabIndex = 38;
+            // 
+            // cbxPosition
+            // 
+            this.cbxPosition.FormattingEnabled = true;
+            this.cbxPosition.Location = new System.Drawing.Point(365, 151);
+            this.cbxPosition.Name = "cbxPosition";
+            this.cbxPosition.Size = new System.Drawing.Size(121, 21);
+            this.cbxPosition.TabIndex = 39;
             // 
             // frmNhanVien
             // 
@@ -552,8 +552,6 @@ namespace BTL.View1
         private System.Windows.Forms.DateTimePicker dtngaytao;
         private System.Windows.Forms.DateTimePicker dtngayky;
         private System.Windows.Forms.DateTimePicker dtngaysinh;
-        private System.Windows.Forms.TextBox txtmachucvu;
-        private System.Windows.Forms.TextBox txtmaphongban;
         private System.Windows.Forms.TextBox txthsl;
         private System.Windows.Forms.TextBox txttrinhdo;
         private System.Windows.Forms.TextBox txtquequan;
@@ -582,5 +580,7 @@ namespace BTL.View1
         private System.Windows.Forms.TextBox txtma;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbxPosition;
+        private System.Windows.Forms.ComboBox cbxDepartment;
     }
 }

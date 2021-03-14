@@ -17,39 +17,28 @@ namespace BTL
     public partial class ManagerForm : Form
     {
         private readonly User user;
+
         public ManagerForm()
         {
             InitializeComponent();
         }
 
-        public ManagerForm(User data): this()
+        public ManagerForm(User data) : this()
         {
             this.user = data;
 
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            IsMdiContainer = true;
-            getUser();
         }
         public void getUserPublic()
         {
             getUser();
         }
-
-        private void changePassword_Click(object sender, EventArgs e)
-        {
-            frmChangePassword frm = new frmChangePassword(this.user);
-            frm.ShowDialog();
-        }
         private void getUser()
         {
             string query = "select * from tblTaiKhoan where tenDangNhap = '" + user.username + "'";
-            using(SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
             {
                 conn.Open();
-                using(SqlCommand cmd = new SqlCommand(query,conn))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
@@ -61,6 +50,17 @@ namespace BTL
                 }
                 conn.Close();
             }
+        }
+
+        private void ManagerForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changePassword_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frm = new frmChangePassword(this.user);
+            frm.ShowDialog();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -80,20 +80,21 @@ namespace BTL
             frm.Show();
         }
 
-        private void managerEmp_Click(object sender, EventArgs e)
+        private void mangerEmp_Click(object sender, EventArgs e)
         {
             frmNhanVien frm = new frmNhanVien();
             addForm(frm);
         }
 
-        private void managerComplain_Click(object sender, EventArgs e)
+        private void managerSalary_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void managerSalary_Click(object sender, EventArgs e)
+        private void managerPosition_Click(object sender, EventArgs e)
         {
-
+            FormChucvu frm = new FormChucvu();
+            addForm(frm);
         }
 
         private void managerProject_Click(object sender, EventArgs e)
@@ -102,17 +103,18 @@ namespace BTL
             addForm(frm);
         }
 
-        private void managerWorkingProcess_Click(object sender, EventArgs e)
+        private void managerComplain_Click(object sender, EventArgs e)
         {
 
         }
 
         private void managerDepartment_Click(object sender, EventArgs e)
         {
-
+            FormPhongban frm = new FormPhongban();
+            addForm(frm);
         }
 
-        private void managerPosition_Click(object sender, EventArgs e)
+        private void managerWordkingProcess_Click(object sender, EventArgs e)
         {
 
         }

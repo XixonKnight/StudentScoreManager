@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BTL.configDB;
 using BTL.Control1;
 using BTL.Object1;
 using BTL.View1;
@@ -29,6 +31,7 @@ namespace BTL.View1
             dtNhanVien = nvctr.getData();
             dgvDSNV.DataSource = dtNhanVien;
             bingding();
+            showDataCbx();
         }
         //add data
         void bingding()
@@ -51,10 +54,11 @@ namespace BTL.View1
                 txtcmnd.DataBindings.Add("Text", dgvDSNV.DataSource, "cmnd");
                 txtquequan.DataBindings.Clear();
                 txtquequan.DataBindings.Add("Text", dgvDSNV.DataSource, "queQuan");
-                txtmaphongban.DataBindings.Clear();
-                txtmaphongban.DataBindings.Add("Text", dgvDSNV.DataSource, "idPb");
-                txtmachucvu.DataBindings.Clear();
-                txtmachucvu.DataBindings.Add("Text", dgvDSNV.DataSource, "idChucVu");
+                //txtmaphongban.DataBindings.Clear();
+                //txtmaphongban.DataBindings.Add("Text", dgvDSNV.DataSource, "idPb");
+                //txtmachucvu.DataBindings.Clear();
+                //txtmachucvu.DataBindings.Add("Text", dgvDSNV.DataSource, "idChucVu");
+                //cbxDepartment.set
                 txthsl.DataBindings.Clear();
                 txthsl.DataBindings.Add("Text", dgvDSNV.DataSource, "heSoLuong");
                 txttrinhdo.DataBindings.Clear();
@@ -78,8 +82,10 @@ namespace BTL.View1
             txthsl.Enabled = e;
             txtemail.Enabled = e;
             txtcmnd.Enabled = e;
-            txtmachucvu.Enabled = e;
-            txtmaphongban.Enabled = e;
+            //txtmachucvu.Enabled = e;
+            //txtmaphongban.Enabled = e;
+            cbxDepartment.Enabled = e;
+            cbxPosition.Enabled = e;
             txtsdt.Enabled = e;
             txttrinhdo.Enabled = e;
             txtquequan.Enabled = e;
@@ -100,8 +106,8 @@ namespace BTL.View1
         void ganDuLieu(NhanVienObj nvObj)
         {
             nvObj.Idnv = txtma.Text.Trim();
-            nvObj.Idpb = txtmaphongban.Text.Trim();
-            nvObj.Idchucvu = txtmachucvu.Text.Trim();
+            nvObj.Idpb = (cbxDepartment.SelectedValue).ToString();
+            nvObj.Idchucvu = (cbxPosition.SelectedValue).ToString();
             nvObj.Ten = txtten.Text.Trim();
             nvObj.Gioitinh = cbgioitinh.Text.Trim();
             nvObj.Cmnd = txtcmnd.Text.Trim();
@@ -197,5 +203,42 @@ namespace BTL.View1
             frmDuAn.ShowDialog();
             this.Close();
         }
+        private DataSet getDataCbx()
+        {
+            DataSet ds = new DataSet();
+            //DataTable dtDepartment= new DataTable();
+            //DataTable dtPosition = new DataTable();
+            string queryDepartment = "select * from tblPhongBan";
+            string queryPos = "select * from tblChucVu";
+            using(SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+                SqlDataAdapter dataDepartment = new SqlDataAdapter(queryDepartment,conn);
+                SqlDataAdapter dataPos = new SqlDataAdapter(queryPos,conn);
+                dataDepartment.Fill(ds, "department");
+                dataPos.Fill(ds, "position");
+                //dtDepartment = ds.Tables["department"];
+                //dtPosition = ds.Tables["position"];
+                conn.Close();
+            }
+            return ds;
+        }
+        private void showDataCbx()
+        {
+            DataSet ds = getDataCbx();
+            DataTable dtDepratment = ds.Tables["department"];
+            DataView viewDepartment = new DataView(dtDepratment);
+            viewDepartment.Sort = "id";
+            cbxDepartment.DataSource = viewDepartment;
+            cbxDepartment.DisplayMember = "tenPhongBan";
+            cbxDepartment.ValueMember = "id";
+            DataTable dtPosition = ds.Tables["position"];
+            DataView viewPos = new DataView(dtPosition);
+            viewPos.Sort = "id";
+            cbxPosition.DataSource = viewPos;
+            cbxPosition.DisplayMember = "tenChucVu";
+            cbxPosition.ValueMember = "id";
+        }
     }
+
 }
