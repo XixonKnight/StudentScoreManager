@@ -56,7 +56,7 @@ namespace BTL
             this.managerReport});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,14 +72,14 @@ namespace BTL
             // changePassword
             // 
             this.changePassword.Name = "changePassword";
-            this.changePassword.Size = new System.Drawing.Size(180, 22);
+            this.changePassword.Size = new System.Drawing.Size(145, 22);
             this.changePassword.Text = "Đổi mật khẩu";
             this.changePassword.Click += new System.EventHandler(this.changePassword_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(145, 22);
             this.Exit.Text = "Đăng xuất";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -163,14 +163,14 @@ namespace BTL
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 24);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(800, 426);
+            this.pnlContent.Size = new System.Drawing.Size(984, 501);
             this.pnlContent.TabIndex = 1;
             // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 525);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

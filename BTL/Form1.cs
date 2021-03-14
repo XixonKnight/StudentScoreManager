@@ -1,5 +1,6 @@
 ﻿using BTL.configDB;
 using BTL.model;
+using BTL.View1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,7 +82,8 @@ namespace BTL
 
         private void managerEmp_Click(object sender, EventArgs e)
         {
-
+            frmNhanVien frm = new frmNhanVien();
+            addForm(frm);
         }
 
         private void managerComplain_Click(object sender, EventArgs e)
@@ -96,7 +98,8 @@ namespace BTL
 
         private void managerProject_Click(object sender, EventArgs e)
         {
-
+            frmDuAn frm = new frmDuAn();
+            addForm(frm);
         }
 
         private void managerWorkingProcess_Click(object sender, EventArgs e)
