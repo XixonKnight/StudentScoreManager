@@ -16,7 +16,15 @@ namespace BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPhongban());
+            Application.Run(new FormPhongban());
+        }
+
+        public static Form FindOpenForm(String name)
+        {
+            foreach (Form f in Application.OpenForms)
+                if (f.GetType().Name.Equals(name, StringComparison.CurrentCultureIgnoreCase))
+                    return f;
+            return null;
         }
     }
 }

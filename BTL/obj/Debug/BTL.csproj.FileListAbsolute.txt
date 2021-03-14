@@ -11,10 +11,11 @@ C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\bin\Debug\BTL.exe.config
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\bin\Debug\BTL.exe
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\bin\Debug\BTL.pdb
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.csprojAssemblyReference.cache
-C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.Form1.resources
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.Properties.Resources.resources
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.csproj.GenerateResource.cache
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.exe
 C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.pdb
-C:\Users\Admin\Desktop\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.FrmPhongban.resources
+C:\Users\Admin\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.FormChucvu.resources
+C:\Users\Admin\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.FormMain.resources
+C:\Users\Admin\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.FormPhongban.resources

@@ -49,17 +49,23 @@
   <ItemGroup>
     <Compile Include="common\Constants.cs" />
     <Compile Include="configDB\ConnectionString.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormChucvu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormChucvu.Designer.cs">
+      <DependentUpon>FormChucvu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPhongban.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPhongban.Designer.cs">
-      <DependentUpon>FrmPhongban.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhongban.Designer.cs">
+      <DependentUpon>FormPhongban.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Complain.cs" />
     <Compile Include="model\Department.cs" />
@@ -76,11 +82,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QL_NhanVienDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormChucvu.resx">
+      <DependentUpon>FormChucvu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPhongban.resx">
-      <DependentUpon>FrmPhongban.cs</DependentUpon>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhongban.resx">
+      <DependentUpon>FormPhongban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
