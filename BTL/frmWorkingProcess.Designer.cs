@@ -60,6 +60,7 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(138, 44);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(162, 20);
@@ -76,6 +77,7 @@
             // 
             // cbxEmp
             // 
+            this.cbxEmp.Enabled = false;
             this.cbxEmp.FormattingEnabled = true;
             this.cbxEmp.Location = new System.Drawing.Point(551, 85);
             this.cbxEmp.Name = "cbxEmp";
@@ -93,6 +95,7 @@
             // 
             // txtEffectiveDate
             // 
+            this.txtEffectiveDate.Enabled = false;
             this.txtEffectiveDate.Location = new System.Drawing.Point(138, 129);
             this.txtEffectiveDate.Name = "txtEffectiveDate";
             this.txtEffectiveDate.Size = new System.Drawing.Size(162, 20);
@@ -109,6 +112,7 @@
             // 
             // txtAddressWorking
             // 
+            this.txtAddressWorking.Enabled = false;
             this.txtAddressWorking.Location = new System.Drawing.Point(138, 86);
             this.txtAddressWorking.Name = "txtAddressWorking";
             this.txtAddressWorking.Size = new System.Drawing.Size(162, 20);
@@ -125,6 +129,7 @@
             // 
             // txtExpiredDate
             // 
+            this.txtExpiredDate.Enabled = false;
             this.txtExpiredDate.Location = new System.Drawing.Point(551, 136);
             this.txtExpiredDate.Name = "txtExpiredDate";
             this.txtExpiredDate.Size = new System.Drawing.Size(176, 20);
@@ -186,15 +191,18 @@
             // 
             // btnSave
             // 
+            this.btnSave.Enabled = false;
             this.btnSave.Location = new System.Drawing.Point(484, 207);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.Enabled = false;
             this.btnCancel.Location = new System.Drawing.Point(618, 207);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -206,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 533);
+            this.ClientSize = new System.Drawing.Size(801, 533);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnEdit);

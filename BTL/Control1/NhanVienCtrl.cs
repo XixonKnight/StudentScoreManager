@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using BTL.Model1;
 using BTL.Object1;
+using System.Data.SqlClient;
+using BTL.configDB;
+
 namespace BTL.Control1
 {
     class NhanVienCtrl
@@ -28,5 +31,21 @@ namespace BTL.Control1
             return nvMod.DelData(ma);
         }
 
+        public DataTable getDataEmp()
+        {
+            DataSet dataSet = new DataSet();
+            using (SqlConnection conn = new SqlConnection(ConnectionString.connectionString))
+            {
+                conn.Open();
+                string query = "select nv.idNV,nv.tenNV from tblNhanVien nv";
+                using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn))
+                {
+
+                    dataAdapter.Fill(dataSet, "Emp");
+                }
+                conn.Close();
+            }
+            return dataSet.Tables["Emp"];
+        }
     }
 }
