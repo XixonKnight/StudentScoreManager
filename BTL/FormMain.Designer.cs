@@ -29,21 +29,19 @@ namespace BTL
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.managerEmp = new System.Windows.Forms.ToolStripMenuItem();
-            this.managerComplain = new System.Windows.Forms.ToolStripMenuItem();
+            this.mangerEmp = new System.Windows.Forms.ToolStripMenuItem();
             this.managerSalary = new System.Windows.Forms.ToolStripMenuItem();
-            this.managerProject = new System.Windows.Forms.ToolStripMenuItem();
-            this.managerWorkingProcess = new System.Windows.Forms.ToolStripMenuItem();
-            this.managerDepartment = new System.Windows.Forms.ToolStripMenuItem();
             this.managerPosition = new System.Windows.Forms.ToolStripMenuItem();
-            this.managerReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.managerProject = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerComplain = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerDepartment = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerWordkingProcess = new System.Windows.Forms.ToolStripMenuItem();
+            this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,11 +51,11 @@ namespace BTL
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.quảnLýToolStripMenuItem,
-            this.managerReport});
+            this.báoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Size = new System.Drawing.Size(1023, 24);
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // hệThốngToolStripMenuItem
@@ -86,30 +84,23 @@ namespace BTL
             // quảnLýToolStripMenuItem
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.managerEmp,
-            this.managerComplain,
+            this.mangerEmp,
             this.managerSalary,
+            this.managerPosition,
             this.managerProject,
-            this.managerWorkingProcess,
+            this.managerComplain,
             this.managerDepartment,
-            this.managerPosition});
+            this.managerWordkingProcess});
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
-            // managerEmp
+            // mangerEmp
             // 
-            this.managerEmp.Name = "managerEmp";
-            this.managerEmp.Size = new System.Drawing.Size(215, 22);
-            this.managerEmp.Text = "Quản lý nhân viên";
-            this.managerEmp.Click += new System.EventHandler(this.managerEmp_Click);
-            // 
-            // managerComplain
-            // 
-            this.managerComplain.Name = "managerComplain";
-            this.managerComplain.Size = new System.Drawing.Size(215, 22);
-            this.managerComplain.Text = "Quản lý khiểu nại";
-            this.managerComplain.Click += new System.EventHandler(this.managerComplain_Click);
+            this.mangerEmp.Name = "mangerEmp";
+            this.mangerEmp.Size = new System.Drawing.Size(215, 22);
+            this.mangerEmp.Text = "Quản lý nhân viên";
+            this.mangerEmp.Click += new System.EventHandler(this.mangerEmp_Click);
             // 
             // managerSalary
             // 
@@ -118,6 +109,13 @@ namespace BTL
             this.managerSalary.Text = "Quản lý lương";
             this.managerSalary.Click += new System.EventHandler(this.managerSalary_Click);
             // 
+            // managerPosition
+            // 
+            this.managerPosition.Name = "managerPosition";
+            this.managerPosition.Size = new System.Drawing.Size(215, 22);
+            this.managerPosition.Text = "Quản lý chức vụ";
+            this.managerPosition.Click += new System.EventHandler(this.managerPosition_Click);
+            // 
             // managerProject
             // 
             this.managerProject.Name = "managerProject";
@@ -125,12 +123,12 @@ namespace BTL
             this.managerProject.Text = "Quản lý dự án";
             this.managerProject.Click += new System.EventHandler(this.managerProject_Click);
             // 
-            // managerWorkingProcess
+            // managerComplain
             // 
-            this.managerWorkingProcess.Name = "managerWorkingProcess";
-            this.managerWorkingProcess.Size = new System.Drawing.Size(215, 22);
-            this.managerWorkingProcess.Text = "Quản lý quá trình công tác";
-            this.managerWorkingProcess.Click += new System.EventHandler(this.managerWorkingProcess_Click);
+            this.managerComplain.Name = "managerComplain";
+            this.managerComplain.Size = new System.Drawing.Size(215, 22);
+            this.managerComplain.Text = "Quản lý khiếu nại";
+            this.managerComplain.Click += new System.EventHandler(this.managerComplain_Click);
             // 
             // managerDepartment
             // 
@@ -139,44 +137,40 @@ namespace BTL
             this.managerDepartment.Text = "Quản lý phòng ban";
             this.managerDepartment.Click += new System.EventHandler(this.managerDepartment_Click);
             // 
-            // managerPosition
+            // managerWordkingProcess
             // 
-            this.managerPosition.Name = "managerPosition";
-            this.managerPosition.Size = new System.Drawing.Size(215, 22);
-            this.managerPosition.Text = "Quản lý chức vụ";
-            this.managerPosition.Click += new System.EventHandler(this.managerPosition_Click);
+            this.managerWordkingProcess.Name = "managerWordkingProcess";
+            this.managerWordkingProcess.Size = new System.Drawing.Size(215, 22);
+            this.managerWordkingProcess.Text = "Quản lý quá trình công tác";
+            this.managerWordkingProcess.Click += new System.EventHandler(this.managerWordkingProcess_Click);
             // 
-            // managerReport
+            // báoCáoToolStripMenuItem
             // 
-            this.managerReport.Name = "managerReport";
-            this.managerReport.Size = new System.Drawing.Size(61, 20);
-            this.managerReport.Text = "Báo cáo";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
+            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.báoCáoToolStripMenuItem.Text = "Báo cáo";
             // 
             // pnlContent
             // 
-            this.pnlContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlContent.AutoScroll = true;
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 24);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(984, 501);
-            this.pnlContent.TabIndex = 1;
+            this.pnlContent.Size = new System.Drawing.Size(1023, 476);
+            this.pnlContent.TabIndex = 3;
             // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 525);
+            this.ClientSize = new System.Drawing.Size(1023, 500);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ManagerForm";
-            this.Text = "FormManager";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Text = "FormMain";
+            this.Load += new System.EventHandler(this.ManagerForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -191,16 +185,14 @@ namespace BTL
         private System.Windows.Forms.ToolStripMenuItem changePassword;
         private System.Windows.Forms.ToolStripMenuItem Exit;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem managerEmp;
-        private System.Windows.Forms.ToolStripMenuItem managerComplain;
+        private System.Windows.Forms.ToolStripMenuItem mangerEmp;
         private System.Windows.Forms.ToolStripMenuItem managerSalary;
-        private System.Windows.Forms.ToolStripMenuItem managerProject;
-        private System.Windows.Forms.ToolStripMenuItem managerWorkingProcess;
-        private System.Windows.Forms.ToolStripMenuItem managerDepartment;
         private System.Windows.Forms.ToolStripMenuItem managerPosition;
-        private System.Windows.Forms.ToolStripMenuItem managerReport;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem managerProject;
+        private System.Windows.Forms.ToolStripMenuItem managerComplain;
+        private System.Windows.Forms.ToolStripMenuItem managerDepartment;
+        private System.Windows.Forms.ToolStripMenuItem managerWordkingProcess;
+        private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
         private System.Windows.Forms.Panel pnlContent;
     }
 }
-

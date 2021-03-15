@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,11 +51,11 @@
     <Compile Include="Control1\NhanVienCtrl.cs" />
     <Compile Include="common\Constants.cs" />
     <Compile Include="configDB\ConnectionString.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormChucvu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormChucvu.Designer.cs">
+      <DependentUpon>FormChucvu.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1\ConnectToSQL.cs" />
     <Compile Include="Model1\DuAnMod.cs" />
@@ -79,6 +80,18 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhongban.Designer.cs">
+      <DependentUpon>FormPhongban.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\Complain.cs" />
     <Compile Include="model\Department.cs" />
     <Compile Include="model\Employee.cs" />
@@ -89,9 +102,6 @@
     <Compile Include="model\WorkingProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +123,20 @@
     <Compile Include="View1\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QL_NhanVienDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_NhanVienDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormChucvu.resx">
+      <DependentUpon>FormChucvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhongban.resx">
+      <DependentUpon>FormPhongban.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -137,12 +161,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QL_NhanVienDataSet.xsc">
+      <DependentUpon>QL_NhanVienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QL_NhanVienDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_NhanVienDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_NhanVienDataSet.xss">
+      <DependentUpon>QL_NhanVienDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="dto\" />
+    <Folder Include="Dao\" />
+    <Folder Include="dtotk\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

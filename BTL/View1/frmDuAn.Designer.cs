@@ -38,21 +38,17 @@ namespace BTL.View1
             this.label4 = new System.Windows.Forms.Label();
             this.txttencongty = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtmanhanvien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txttenduan = new System.Windows.Forms.TextBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.dtngaycapnhat = new System.Windows.Forms.DateTimePicker();
-            this.dtngaytao = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtma = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxEmp = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDA)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -64,9 +60,9 @@ namespace BTL.View1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgvDSDA);
-            this.groupBox2.Location = new System.Drawing.Point(1, 259);
+            this.groupBox2.Location = new System.Drawing.Point(1, 207);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(993, 130);
+            this.groupBox2.Size = new System.Drawing.Size(993, 182);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Dự Án";
@@ -78,7 +74,7 @@ namespace BTL.View1
             this.dgvDSDA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSDA.Location = new System.Drawing.Point(3, 18);
             this.dgvDSDA.Name = "dgvDSDA";
-            this.dgvDSDA.Size = new System.Drawing.Size(987, 109);
+            this.dgvDSDA.Size = new System.Drawing.Size(987, 161);
             this.dgvDSDA.TabIndex = 0;
             // 
             // dtngayketthuc
@@ -87,7 +83,7 @@ namespace BTL.View1
             this.dtngayketthuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtngayketthuc.Location = new System.Drawing.Point(750, 81);
             this.dtngayketthuc.Name = "dtngayketthuc";
-            this.dtngayketthuc.Size = new System.Drawing.Size(114, 22);
+            this.dtngayketthuc.Size = new System.Drawing.Size(157, 22);
             this.dtngayketthuc.TabIndex = 46;
             // 
             // label6
@@ -106,7 +102,7 @@ namespace BTL.View1
             this.dtngaybatdau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtngaybatdau.Location = new System.Drawing.Point(423, 81);
             this.dtngaybatdau.Name = "dtngaybatdau";
-            this.dtngaybatdau.Size = new System.Drawing.Size(118, 22);
+            this.dtngaybatdau.Size = new System.Drawing.Size(145, 22);
             this.dtngaybatdau.TabIndex = 44;
             // 
             // label5
@@ -143,17 +139,9 @@ namespace BTL.View1
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(29, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 15);
+            this.label3.Size = new System.Drawing.Size(62, 15);
             this.label3.TabIndex = 40;
-            this.label3.Text = "Mã nhân viên";
-            // 
-            // txtmanhanvien
-            // 
-            this.txtmanhanvien.Enabled = false;
-            this.txtmanhanvien.Location = new System.Drawing.Point(136, 81);
-            this.txtmanhanvien.Name = "txtmanhanvien";
-            this.txtmanhanvien.Size = new System.Drawing.Size(69, 22);
-            this.txtmanhanvien.TabIndex = 39;
+            this.label3.Text = "Nhân viên";
             // 
             // label2
             // 
@@ -179,7 +167,7 @@ namespace BTL.View1
             this.btnHuy.Enabled = false;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(681, 195);
+            this.btnHuy.Location = new System.Drawing.Point(660, 140);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(84, 35);
             this.btnHuy.TabIndex = 36;
@@ -193,7 +181,7 @@ namespace BTL.View1
             this.btnLuu.Enabled = false;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(509, 195);
+            this.btnLuu.Location = new System.Drawing.Point(520, 140);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(84, 35);
             this.btnLuu.TabIndex = 35;
@@ -206,7 +194,7 @@ namespace BTL.View1
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(377, 195);
+            this.btnXoa.Location = new System.Drawing.Point(382, 140);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(84, 35);
             this.btnXoa.TabIndex = 34;
@@ -219,51 +207,13 @@ namespace BTL.View1
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(239, 195);
+            this.btnSua.Location = new System.Drawing.Point(252, 140);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(84, 35);
             this.btnSua.TabIndex = 33;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // dtngaycapnhat
-            // 
-            this.dtngaycapnhat.Enabled = false;
-            this.dtngaycapnhat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtngaycapnhat.Location = new System.Drawing.Point(423, 133);
-            this.dtngaycapnhat.Name = "dtngaycapnhat";
-            this.dtngaycapnhat.Size = new System.Drawing.Size(118, 22);
-            this.dtngaycapnhat.TabIndex = 31;
-            // 
-            // dtngaytao
-            // 
-            this.dtngaytao.Enabled = false;
-            this.dtngaytao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtngaytao.Location = new System.Drawing.Point(136, 133);
-            this.dtngaytao.Name = "dtngaytao";
-            this.dtngaytao.Size = new System.Drawing.Size(114, 22);
-            this.dtngaytao.TabIndex = 29;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(292, 137);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 15);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Ngày cập nhật";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(29, 137);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 15);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Ngày tạo";
             // 
             // label1
             // 
@@ -278,9 +228,9 @@ namespace BTL.View1
             // txtma
             // 
             this.txtma.Enabled = false;
-            this.txtma.Location = new System.Drawing.Point(138, 31);
+            this.txtma.Location = new System.Drawing.Point(128, 31);
             this.txtma.Name = "txtma";
-            this.txtma.Size = new System.Drawing.Size(66, 22);
+            this.txtma.Size = new System.Drawing.Size(120, 22);
             this.txtma.TabIndex = 1;
             // 
             // btnThem
@@ -288,7 +238,7 @@ namespace BTL.View1
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(98, 195);
+            this.btnThem.Location = new System.Drawing.Point(110, 140);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(84, 35);
             this.btnThem.TabIndex = 0;
@@ -300,6 +250,7 @@ namespace BTL.View1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cbxEmp);
             this.groupBox1.Controls.Add(this.dtngayketthuc);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.dtngaybatdau);
@@ -307,26 +258,30 @@ namespace BTL.View1
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txttencongty);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtmanhanvien);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txttenduan);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
-            this.groupBox1.Controls.Add(this.dtngaycapnhat);
-            this.groupBox1.Controls.Add(this.dtngaytao);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtma);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Location = new System.Drawing.Point(4, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(990, 252);
+            this.groupBox1.Size = new System.Drawing.Size(990, 200);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Dự Án";
+            // 
+            // cbxEmp
+            // 
+            this.cbxEmp.Enabled = false;
+            this.cbxEmp.FormattingEnabled = true;
+            this.cbxEmp.Location = new System.Drawing.Point(127, 85);
+            this.cbxEmp.Name = "cbxEmp";
+            this.cbxEmp.Size = new System.Drawing.Size(121, 23);
+            this.cbxEmp.TabIndex = 47;
             // 
             // frmDuAn
             // 
@@ -360,20 +315,16 @@ namespace BTL.View1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txttencongty;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtmanhanvien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txttenduan;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.DateTimePicker dtngaycapnhat;
-        private System.Windows.Forms.DateTimePicker dtngaytao;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtma;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cbxEmp;
     }
 }

@@ -18,5 +18,14 @@ namespace BTL
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
         }
+
+        //public static Form FindOpenForm(String name)
+        //{
+        //    foreach (Form f in Application.OpenForms)
+        //        if (f.GetType().Name.Equals(name, StringComparison.CurrentCultureIgnoreCase))
+        //            return f;
+        //    return null;
+        //    Application.Run(new frmLogin());
+        //}
     }
 }

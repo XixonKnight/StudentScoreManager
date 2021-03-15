@@ -26,7 +26,10 @@ namespace BTL.Model1
         #region Contructor
         public ConnectToSQL()
         {
-            StrCon = @"Data Source=DESKTOP-GTE0HHE\MSSQLSERVER01;Initial Catalog=QLy_NhanVien;Integrated Security=True";
+            //StrCon = @"Data Source=DESKTOP-GTE0HHE\MSSQLSERVER01;Initial Catalog=QLy_NhanVien;Integrated Security=True";
+            StrCon = @"Data Source=DESKTOP-RMQQQBT;" +
+            "Initial Catalog=QLy_NhanVien;Persist Security Info=True;User ID=sa;" +
+            "Password=0363340096";
             Conn = new SqlConnection(StrCon);
         }
         #endregion
