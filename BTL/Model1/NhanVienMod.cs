@@ -118,12 +118,14 @@ namespace BTL.Model1
         public bool DelData(String idnv)
         {
 
-            cmd.CommandText = "delete tblNhanVien where idNV = '" + idnv + "' ";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "proc_del_emp";
             cmd.Connection = con.Connection;
             try
             {
                 con.OpenConn();
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", idnv);
                 cmd.ExecuteNonQuery();
                 con.CloseConn();
                 return true;

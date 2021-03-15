@@ -63,6 +63,7 @@ namespace BTL
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "proc_insert_working_process";
+                    cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@id", txtId.Text.Trim());
                     cmd.Parameters.AddWithValue("@idNV", cbxEmp.SelectedValue);
                     cmd.Parameters.AddWithValue("@dcCongTac", txtAddressWorking.Text.Trim());
