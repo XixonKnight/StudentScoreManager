@@ -50,7 +50,6 @@ namespace BTL.View1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxPosition = new System.Windows.Forms.ComboBox();
             this.cbxDepartment = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -265,7 +264,6 @@ namespace BTL.View1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.cbxPosition);
             this.groupBox1.Controls.Add(this.cbxDepartment);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
@@ -322,17 +320,6 @@ namespace BTL.View1
             this.cbxDepartment.Name = "cbxDepartment";
             this.cbxDepartment.Size = new System.Drawing.Size(121, 21);
             this.cbxDepartment.TabIndex = 38;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(761, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 38);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Dự Án";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
             // 
@@ -534,7 +521,6 @@ namespace BTL.View1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtma;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbxPosition;
         private System.Windows.Forms.ComboBox cbxDepartment;
     }

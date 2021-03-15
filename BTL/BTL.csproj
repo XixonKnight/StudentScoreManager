@@ -57,6 +57,24 @@
     <Compile Include="FormChucvu.Designer.cs">
       <DependentUpon>FormChucvu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmComplain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComplain.Designer.cs">
+      <DependentUpon>frmComplain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalary.Designer.cs">
+      <DependentUpon>frmSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkingProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkingProcess.Designer.cs">
+      <DependentUpon>frmWorkingProcess.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1\ConnectToSQL.cs" />
     <Compile Include="Model1\DuAnMod.cs" />
     <Compile Include="Model1\NhanVienMod.cs" />
@@ -105,6 +123,9 @@
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmComplain.resx">
+      <DependentUpon>frmComplain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +157,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhongban.resx">
       <DependentUpon>FormPhongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalary.resx">
+      <DependentUpon>frmSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkingProcess.resx">
+      <DependentUpon>frmWorkingProcess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -89,7 +89,8 @@ namespace BTL
 
         private void managerSalary_Click(object sender, EventArgs e)
         {
-
+            frmSalary frm = new frmSalary();
+            addForm(frm);
         }
 
         private void managerPosition_Click(object sender, EventArgs e)
@@ -106,7 +107,8 @@ namespace BTL
 
         private void managerComplain_Click(object sender, EventArgs e)
         {
-
+            frmComplain frm = new frmComplain();
+            addForm(frm);
         }
 
         private void managerDepartment_Click(object sender, EventArgs e)
@@ -117,7 +119,8 @@ namespace BTL
 
         private void managerWordkingProcess_Click(object sender, EventArgs e)
         {
-
+            frmWorkingProcess frm = new frmWorkingProcess();
+            addForm(frm);
         }
     }
 }

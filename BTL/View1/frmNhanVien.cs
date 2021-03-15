@@ -139,6 +139,7 @@ namespace BTL.View1
         //
         void loadcontrol()
         {
+            cbgioitinh.Items.Clear();
             cbgioitinh.Items.Add("Nam");
             cbgioitinh.Items.Add("Nữ");
             showDataCbx();
@@ -214,13 +215,7 @@ namespace BTL.View1
             dis_en(false);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmDuAn frmDuAn = new frmDuAn();
-            frmDuAn.ShowDialog();
-            this.Close();
-        }
-        private DataSet getDataCbx()
+       private DataSet getDataCbx()
         {
             DataSet ds = new DataSet();
             //DataTable dtDepartment= new DataTable();

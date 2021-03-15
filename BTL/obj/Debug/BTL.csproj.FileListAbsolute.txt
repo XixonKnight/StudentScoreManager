@@ -49,3 +49,6 @@ C:\Users\Admin\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.FormMain.res
 C:\Users\Admin\Desktop\btl C#\StudentScoreManager\BTL\obj\Debug\BTL.FormPhongban.resources
 D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.FormChucvu.resources
 D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.FormPhongban.resources
+D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.frmComplain.resources
+D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.frmSalary.resources
+D:\BTL C#\StudentScoreManager\BTL\obj\Debug\BTL.frmWorkingProcess.resources
