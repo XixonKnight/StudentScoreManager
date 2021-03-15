@@ -16,7 +16,7 @@ namespace BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new ManagerForm());
         }
 
         //public static Form FindOpenForm(String name)

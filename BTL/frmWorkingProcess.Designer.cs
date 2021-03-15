@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(471, 93);
+            this.label2.Location = new System.Drawing.Point(449, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.cbxEmp.Enabled = false;
             this.cbxEmp.FormattingEnabled = true;
-            this.cbxEmp.Location = new System.Drawing.Point(551, 85);
+            this.cbxEmp.Location = new System.Drawing.Point(551, 81);
             this.cbxEmp.Name = "cbxEmp";
             this.cbxEmp.Size = new System.Drawing.Size(176, 21);
             this.cbxEmp.TabIndex = 3;
@@ -121,7 +121,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(437, 142);
+            this.label5.Location = new System.Drawing.Point(433, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 8;
@@ -130,7 +130,7 @@
             // txtExpiredDate
             // 
             this.txtExpiredDate.Enabled = false;
-            this.txtExpiredDate.Location = new System.Drawing.Point(551, 136);
+            this.txtExpiredDate.Location = new System.Drawing.Point(551, 130);
             this.txtExpiredDate.Name = "txtExpiredDate";
             this.txtExpiredDate.Size = new System.Drawing.Size(176, 20);
             this.txtExpiredDate.TabIndex = 9;
@@ -142,6 +142,7 @@
             this.lstWorkingProcess.Name = "lstWorkingProcess";
             this.lstWorkingProcess.Size = new System.Drawing.Size(776, 224);
             this.lstWorkingProcess.TabIndex = 10;
+            this.lstWorkingProcess.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lstWorkingProcess_CellClick);
             // 
             // label6
             // 
@@ -179,6 +180,7 @@
             this.btnRemove.TabIndex = 14;
             this.btnRemove.Text = "Xóa";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnEdit
             // 
@@ -188,6 +190,7 @@
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -209,6 +212,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmWorkingProcess
             // 
